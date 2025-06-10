@@ -36,4 +36,4 @@ console.log(wordToNumber("seven")); // 7
 
 ## License
 
-MIT © [Hridoy Saha](LICENSE)
+MIT © [Hridoy Saha](https://github.com/hridoysaha969/word-number-word?tab=MIT-1-ov-file)
