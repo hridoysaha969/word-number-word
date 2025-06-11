@@ -1,6 +1,6 @@
 {
   "name": "word-number-word",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Lightweight, type-safe converter for transforming numbers to words and vice versa in JavaScript/TypeScript.",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
