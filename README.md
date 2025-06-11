@@ -5,7 +5,7 @@
 [![Types](https://img.shields.io/badge/%F0%9F%93%9D-TypeScript-blue)](https://www.typescriptlang.org/)
 [![Build](https://img.shields.io/badge/build-passing-brightgreen.svg)](#)
 
-> Convert numbers to words and words back to numbers — simple, accurate, and type-safe. Works seamlessly with JavaScript, TypeScript, Node.js, React, Next.js, and even from the CLI.
+> Convert numbers to words and words back to numbers — now with support for currency. Simple, accurate, and type-safe. Works seamlessly with JavaScript, TypeScript, Node.js, React, Next.js, and even from the CLI.
 
 ---
 
@@ -15,6 +15,7 @@
   - `42 → "forty-two"`
   - `"seven point five"` → `7.5`
 - ✅ Supports **integers**, **negatives**, and **decimal numbers**
+- 💰 Currency support (e.g., `10.25` ↔️ `"ten dollars and twenty-five cents"`)
 - 🌍 Handles numbers up to **trillions**
 - 💻 Works with **Node.js**, **browser environments**, and **CLI**
 - 📦 Built with **TypeScript** & supports **ESM** and **CommonJS**
@@ -37,13 +38,20 @@ yarn add word-number-word
 ### JavaScript / TypeScript
 
 ```ts
-import { numberToWord, wordToNumber } from "word-number-word";
+import {
+  numberToWord,
+  wordToNumber,
+  currencyToWord,
+  wordToCurrencyNumber,
+} from "word-number-word";
 
+// Basic usage
 console.log(numberToWord(42)); // "forty-two"
-console.log(numberToWord(-5.2)); // "minus five point two"
-
-console.log(wordToNumber("seven")); // 7
 console.log(wordToNumber("minus three")); // -3
+
+// Currency support
+console.log(currencyToWord(10.25, "usd")); // "ten dollars and twenty-five cents"
+console.log(wordToCurrencyNumber("ten dollars and five cents", "usd")); // 10.05
 ```
 
 ### CLI Usage
@@ -60,12 +68,14 @@ npx word-number-word "two thousand and five"
 
 ## 📚 API Reference
 
-| Function                    | Description                          | Example                                            |
-| --------------------------- | ------------------------------------ | -------------------------------------------------- |
-| `numberToWord(num: number)` | Converts a number to its word form   | `numberToWord(123)` → `"one hundred twenty-three"` |
-| `wordToNumber(str: string)` | Converts a word string into a number | `wordToNumber("five")` → `5`                       |
+| Function                                | Description                                                | Example                                                         |
+| --------------------------------------- | ---------------------------------------------------------- | --------------------------------------------------------------- |
+| `numberToWord(num: number)`             | Converts a number to its word form                         | `numberToWord(123)` → `"one hundred twenty-three"`              |
+| `wordToNumber(str: string)`             | Converts a word string into a number                       | `wordToNumber("five")` → `5`                                    |
+| `currencyToWord(num: number, currency)` | Converts currency number to words (with major/minor units) | `currencyToWord(4.5, "usd")` → `"four dollars and fifty cents"` |
+| `wordToCurrency(str, currency)`         | Converts word form currency to number                      | `wordToCurrency("ten dollars and five cents", "usd")` → `10.05` |
 
-> **Note:** Words like `"minus"` and `"point"` are fully supported.
+> **Note:** Currency codes supported `"usd"`, `"bdt"`, `"eur"`, `"gbp"`. Handles both `"forty-two"` and `"forty two"` formats.
 
 ---
 
@@ -81,13 +91,15 @@ npx word-number-word "two thousand and five"
 
 ## 🧪 Examples
 
-| Input                    | Output                           |
-| ------------------------ | -------------------------------- |
-| `123`                    | `"one hundred twenty-three"`     |
-| `-99.5`                  | `"minus ninety-nine point five"` |
-| `"fourteen"`             | `14`                             |
-| `"minus two"`            | `-2`                             |
-| `"three point one four"` | `3.14`                           |
+| Input                                                       | Output                           |
+| ----------------------------------------------------------- | -------------------------------- |
+| `123`                                                       | `"one hundred twenty-three"`     |
+| `-99.5`                                                     | `"minus ninety-nine point five"` |
+| `"fourteen"`                                                | `14`                             |
+| `"minus two"`                                               | `-2`                             |
+| `"three point one four"`                                    | `3.14`                           |
+| `currencyToWord(4.5, "usd")`                                | `"four dollars and fifty cents"` |
+| `wordToCurrencyNumber("ten dollars and five cents", "usd")` | `10.05`                          |
 
 ---
 

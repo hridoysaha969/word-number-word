@@ -1,7 +1,7 @@
 {
   "name": "word-number-word",
   "version": "1.0.3",
-  "description": "Lightweight, type-safe converter for transforming numbers to words and vice versa in JavaScript/TypeScript.",
+  "description": "A TypeScript/JavaScript utility for converting numbers to words and vice versa — including support for decimals, negatives, and currency converting.",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -17,6 +17,8 @@
   "keywords": [
     "number-to-word",
     "word-to-number",
+    "currency to word",
+    "word to currency",
     "number",
     "word",
     "convert",
@@ -26,7 +28,7 @@
     "number-word",
     "js-converter",
     "number string",
-    "cli-tool"
+    "text to number"
   ],
   "author": "Hridoy Saha <hridoysaha969@gmail.com>",
   "license": "MIT",
