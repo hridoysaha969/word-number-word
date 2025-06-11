@@ -29,10 +29,10 @@ const WORD_TO_NUM = {
     ninety: 90,
 };
 const SCALES = {
-    thousand: 1000,
-    million: 1000000,
-    billion: 1000000000,
-    trillion: 1000000000000,
+    thousand: 1_000,
+    million: 1_000_000,
+    billion: 1_000_000_000,
+    trillion: 1_000_000_000_000,
 };
 export function wordToNumber(words) {
     // Handle negatives

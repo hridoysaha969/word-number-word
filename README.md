@@ -42,7 +42,7 @@ import {
   numberToWord,
   wordToNumber,
   currencyToWord,
-  wordToCurrencyNumber,
+  wordToCurrency,
 } from "word-number-word";
 
 // Basic usage
@@ -51,7 +51,7 @@ console.log(wordToNumber("minus three")); // -3
 
 // Currency support
 console.log(currencyToWord(10.25, "usd")); // "ten dollars and twenty-five cents"
-console.log(wordToCurrencyNumber("ten dollars and five cents", "usd")); // 10.05
+console.log(wordToCurrency("ten dollars and five cents", "usd")); // 10.05
 ```
 
 ### CLI Usage
@@ -91,15 +91,15 @@ npx word-number-word "two thousand and five"
 
 ## 🧪 Examples
 
-| Input                                                       | Output                           |
-| ----------------------------------------------------------- | -------------------------------- |
-| `123`                                                       | `"one hundred twenty-three"`     |
-| `-99.5`                                                     | `"minus ninety-nine point five"` |
-| `"fourteen"`                                                | `14`                             |
-| `"minus two"`                                               | `-2`                             |
-| `"three point one four"`                                    | `3.14`                           |
-| `currencyToWord(4.5, "usd")`                                | `"four dollars and fifty cents"` |
-| `wordToCurrencyNumber("ten dollars and five cents", "usd")` | `10.05`                          |
+| Input                                                 | Output                           |
+| ----------------------------------------------------- | -------------------------------- |
+| `123`                                                 | `"one hundred twenty-three"`     |
+| `-99.5`                                               | `"minus ninety-nine point five"` |
+| `"fourteen"`                                          | `14`                             |
+| `"minus two"`                                         | `-2`                             |
+| `"three point one four"`                              | `3.14`                           |
+| `currencyToWord(4.5, "usd")`                          | `"four dollars and fifty cents"` |
+| `wordToCurrency("ten dollars and five cents", "usd")` | `10.05`                          |
 
 ---
 
