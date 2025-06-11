@@ -1,7 +1,7 @@
 {
   "name": "word-number-word",
   "version": "1.0.1",
-  "description": "Convert numbers to words and vice versa with TypeScript support",
+  "description": "Lightweight, type-safe converter for transforming numbers to words and vice versa in JavaScript/TypeScript.",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -15,13 +15,29 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "numbers",
-    "words",
+    "number-to-word",
+    "word-to-number",
+    "number",
+    "word",
+    "convert",
     "converter",
-    "TypeScript"
+    "typescript",
+    "typescript-library",
+    "number-word",
+    "js-converter",
+    "number string",
+    "cli-tool"
   ],
-  "author": "Hridoy Saha",
+  "author": "Hridoy Saha <hridoysaha969@gmail.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hridoysaha969/word-number-word.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hridoysaha969/word-number-word/issues"
+  },
+  "homepage": "https://github.com/hridoysaha969/word-number-word#readme",
   "exports": {
     ".": {
       "import": "./dist/index.js",
